@@ -16,11 +16,19 @@ def add_offer(subject, content, user_id):
     session.commit()
 
 
-def add_user(name, email, password):
+def get_all_offers():
+  offers = session.query(Offer).all()
+  return offers
+
+
+
+def add_user(status, name, email, password):
     print("Added a user!")
-    user = User(name=name, email=email, password=password)
+    user = User(status=status, name=name, email=email, password=password)
     session.add(user)
     session.commit()
+
+
 
 def get_all_users():
   users = session.query(User).all()
@@ -40,10 +48,10 @@ def query_by_password(password):
   return users   
 
 
-def check_login(name,password):
-	user= session.query(
-    User).filter_by(
-    name=name, password=password).first()
-    if user is not None:
-    	return True
-    return False
+# def check_login(name,password):
+# 	user= session.query(
+#     User).filter_by(
+#     name=name, password=password).first()
+#     if user is not None:
+#     	return True
+#     return False

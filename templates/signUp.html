@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+
+	.story{
+		position: absolute;
+    	margin-left: 250px;
+    	top: 40px;
+    	width: 60%;
+		font-family:"FreeMono", monospace;
+		font-size: 35px;
+	}
+
+	.signUp{
+		position: absolute;
+    	margin-left:28%;
+    	top: 3%;
+    	width: 40%;
+		border-color:black;
+		border-radius:25px;
+		font-family:"FreeMono", monospace;
+		background-color:#1abc9c;
+		margin-top: 1%;
+		border-style: solid;
+    	border-width: 3px;
+    	border-radius: 50px;
+    	background-color: rgba(130, 130, 130, 0.5);
+    	color: white;
+    }
+
+    input[type=text]{
+    	width: 50%;
+		height: 40px;
+		margin-left: 25%;
+		background-color:white;
+		border-radius:25px;
+		font-family:"FreeMono", monospace;
+		text-align: center;
+	}
+
+	input[type=password]{
+		width: 50%;
+		height: 40px;
+		margin-left:25%;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		color: black;
+		background-color:white;
+		border-radius:25px;
+		font-family:"FreeMono", monospace;
+		text-align: center;
+	}
+
+	input[type=submit]{
+		width: 35%;
+		height: 40px;
+		margin-left:33%;
+		margin-bottom:2%;
+		background-color: white;
+		font-family:"FreeMono", monospace;
+	}
+
+	input[type=radio]{
+		width: 3%;
+		height: 20px;
+		margin-left: 25%;
+		background-color: white;
+	}
+
+	#other{
+		width: 25%;
+		height: 10%;
+		margin-top:2%;
+		margin-left:37%;
+		margin-bottom: 1%;
+	}
+
+	h1{
+		position: relative;
+		color: #1abc9c ;
+		text-align: center;
+		font-size: 90px;
+		font-family:"FreeMono", monospace;
+		font-weight: 300
+	}
+
+	h2{
+		font-family: "Palanquin", Times, serif;
+		color:white;
+		text-align: center;
+		font-size: 120px;
+		margin: 0px;
+		margin-top: 120px;
+		margin-bottom: 100px;
+	}
+
+	h3{
+		font-family: "Palanquin", Times, serif;
+		text-align: center;
+		font-size: 80px;
+		margin: 0px;
+		margin-top: 80px;
+		margin-bottom: 10px;
+	}
+
+	h4{
+		font-family: "Palanquin", Times, serif;
+		color: #1abc9c;
+		margin-bottom: 5px;
+		text-align: center;
+	}
+
+	a{
+		font-family: "Palanquin", Times, serif;
+		color: blue;
+		font-size: 50px;
+		margin: 0px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		margin-left:430px;
+	}
+
+	.login{
+		font-family: "Palanquin", Times, serif;
+		background-color:  #1abc9c;
+		color: white;
+		text-align: center;
+		margin-top:35%;
+		font-size: 60px;
+		border-radius:25px;
+	}
+
+	body{
+		background-color: #2f2f1e;
+		margin-top:8%;
+/*		background-image: url("dark.jpg");
+*/		background-repeat: no-repeat;
+		background-size : 1400px 790px;
+	}
+
+	@media only screen and (min-width: 1101px) {
+		h1 {
+			font-size: 80px;
+		}
+	}
+
+@media only screen and (max-width: 1100px) {
+    h1 {
+    	font-size: 30px;
+    }
+}
+
+	</style>
+
+</head>
+<body>
+
+	<div class="signUp">
+
+		<form method="POST">
+			<h1>Sign-Up</h1>
+        	<input type="text" name="name" placeholder="Full Name">
+        	<input type="password" name="password" placeholder="Password">
+        	<input type="text" name="email" placeholder="E-mail">
+        	<br>
+
+
+        	<h4>What is your status?</h4>
+        	<input  id="mentor" type="radio" name="status" value="Mentor">Mentor
+            <br>
+        	<input  id="student" type="radio" name="status" value="Student">Student
+            <br>
+            <input type="radio" name="status" value="Other">Other:
+            <br>
+            <input type="text" name="status" placeholder="" id="other">
+        	<br>
+            <br>
+      		<input type="submit" value="SignUp">
+        </form>
+    </div>
+
+</body>
+</html>

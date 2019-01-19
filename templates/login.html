@@ -1,19 +1,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+
+	<style>
+	.Login{
+		position: relative;
+		left: 25%;
+		width:51%;
+		padding: 0;
+		margin: 0;
+		border-style: solid;
+    	border-width: 3px;
+    	border-radius: 50px;
+    	background-color: rgba(130, 130, 130, 0.5);
+    }
+
+    body{
+    	margin-top: 0px;
+		background-color: #2f2f1e;
+		/*background-image: url("dark.jpg"); */
+		background-repeat: no-repeat;
+		background-size : 1400px 790px;
+	}
+
+	input[type=text]{
+		position: relative;
+		width: 50%;
+		height: 60px;	
+		text-align: center;
+		left :25%;
+		background-color:white;
+		border-radius:25px;
+		font-family:"FreeMono", monospace;
+	}
+
+	input[type=password]{
+		position: relative;
+		width: 50%;
+		height: 60px;
+		text-align: center;
+		left :25%;
+		background-color:white;
+		border-radius:25px;
+		font-family:"FreeMono", monospace;
+		font-weight: 500;
+	}
+
+	input[type=submit]{
+		position: relative;
+		width: 35%;
+		height: 40px;
+		text-align: center;
+		left :33%;
+		font-family:"FreeMono", monospace;
+	}
+
+	h1{
+		position: relative;
+		color: #1abc9c ;
+		text-align: center;
+		font-size: 90px;
+		font-family:"FreeMono", monospace;
+		font-weight: 300
+	}
+
+	@media only screen and (min-width: 1101px) {
+		h1 {
+			font-size: 80px;
+			}
+		}
+
+		@media only screen and (max-width: 1100px) {
+			h1 {
+				font-size: 30px;
+			}
+		}
+
+	.Login{
+
+		margin-top: 5%;
+
+	}
+
+
+	</style>
+
 </head>
 <body>
 
 
-<form action="/login" form="post">
-	<input type="text" name="name" placeholder="Name">
-	<br>
-	<input type="password" name="password" placeholder="Password">
-	<br>
-	<input type="submit" value="LogIn">
-	
-</form>
-
+<div class="Login">
+	<form method="POST">
+		<h1>LOGIN</h1>
+		<input type="text" name="name" placeholder="Full Name">
+			<br>
+			<br>
+			<input type="password" name="password" placeholder="Password">
+			<br>
+			<br>
+			<br>
+		
+			<input type="submit" value="LOGIN">
+			<br>
+			<br>
+			<br>
+		</form>
+		</div>
 </body>
 </html>
