@@ -14,6 +14,31 @@ def home():
 
 
 
+
+@app.route('/add_offer', methods=['GET', 'POST'])
+def add_offers_route():
+  if 'logged_in' in session:
+    if session['logged_in']==True:  
+      if request.method == 'GET':
+        return render_template('post.html')
+      if request.method=="POST":
+        print ('Received POST request for adding an article!')
+        subject = request.form['subject']
+        content = request.form['offer_content']
+        user_id=session['user_id']
+        # image=request.form['image']
+        add_offer(subject, content,user_id)
+        return render_template('read.html')
+    else:
+      return redirect(url_for('login_route'))            
+  else:
+    return redirect(url_for('login_route'))
+
+
+
+
+
+
 @app.route('/login', methods=(['GET' , 'POST']))
 def login_route():
 	if 'logged_in' in session and session['logged_in']==True:
@@ -49,6 +74,16 @@ def login_route():
 	# 		print("incorrect username or password")
 
 
+
+@app.route('/offers')
+def offers_page():
+  offers=get_all_offers()
+  offers.reverse()
+
+  return render_template('read.html', offers = offers)
+
+
+
 @app.route('/signup', methods=['GET', 'POST'])
 def signup_route():
 	if request.method == 'GET':
@@ -59,13 +94,14 @@ def signup_route():
 		name = request.form['name']
 		email = request.form['email']
 		password= request.form['password']
+		phone = request.form['phone']
 
 		g=query_by_username(name)
 
 		if g!=None:
 			print ('we already have a user with that name')
 		else:   
-			add_user(status, name, email, password)
+			add_user(status, name, email, password,phone)
 			session['display_login'] = True
 	return redirect(url_for('home'))
 
@@ -77,6 +113,11 @@ def logout_route():
 		session['logged_in']=False
 	return redirect(url_for('home'))
 	print('logged out')
+
+# @app.route('/nav')
+# def navi():
+# 	return render_template('read.html')
+	
 
 
   

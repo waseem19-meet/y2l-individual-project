@@ -29,10 +29,10 @@
 </head>
 <body>
     <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a class="active" href="{{ url_for('home')}}">Home</a></li>
+        <li><a href="{{ url_for('login_route')}}">Log In</a></li>
+        <li><a href="{{ url_for('signup_route')}}">Sign Up</a></li>
+        <li><a href="{{ url_for('logout_route')}}">Log out</a></li>
     </ul>
 
     {% block body %}{% endblock %}

@@ -26,9 +26,10 @@ class User(Base):
   name=Column(String, unique=True )
   email=Column(String)
   password=Column(String)
+  PhoneNum=Column(Integer)
 
   def __repr__(self):
-  	return ("user status: {}, user name:{}, user email:{} user password:{}".format(self.status, self.name, self.email,self.password))
+  	return ("user status: {}, user name:{}, user email:{}, user password:{}, user Phone Num:{}".format(self.status, self.name, self.email,self.password, self.PhoneNum))
  
   
 

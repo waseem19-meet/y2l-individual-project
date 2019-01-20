@@ -22,9 +22,9 @@ def get_all_offers():
 
 
 
-def add_user(status, name, email, password):
+def add_user(status, name, email, password, PhoneNum):
     print("Added a user!")
-    user = User(status=status, name=name, email=email, password=password)
+    user = User(status=status, name=name, email=email, password=password, PhoneNum=PhoneNum)
     session.add(user)
     session.commit()
 
