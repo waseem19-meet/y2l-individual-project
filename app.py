@@ -28,7 +28,7 @@ def add_offers_route():
         user_id=session['user_id']
         # image=request.form['image']
         add_offer(subject, content,user_id)
-        return render_template('read.html')
+        return redirect(url_for('offers_page'))
     else:
       return redirect(url_for('login_route'))            
   else:
@@ -78,9 +78,10 @@ def login_route():
 @app.route('/offers')
 def offers_page():
   offers=get_all_offers()
+  user=get_all_users()
   offers.reverse()
 
-  return render_template('read.html', offers = offers)
+  return render_template('read.html', offers = offers, user=user)
 
 
 
@@ -116,7 +117,7 @@ def logout_route():
 
 # @app.route('/nav')
 # def navi():
-# 	return render_template('read.html')
+# 	return render_template('navigationBar.html')
 	
 
 

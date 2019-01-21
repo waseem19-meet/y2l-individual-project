@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     {% block head %}{% endblock %}
+
     <style>
     ul {
         list-style-type: none;
@@ -25,17 +27,29 @@
         background-color: #111;
     }
 
+    .out{
+        margin-left: 640px;
+        background-color: grey;
+    }
+
     </style>
 </head>
 <body>
-    <ul>
-        <li><a class="active" href="{{ url_for('home')}}">Home</a></li>
-        <li><a href="{{ url_for('login_route')}}">Log In</a></li>
-        <li><a href="{{ url_for('signup_route')}}">Sign Up</a></li>
-        <li><a href="{{ url_for('logout_route')}}">Log out</a></li>
-    </ul>
 
-    {% block body %}{% endblock %}
+   
+        <ul>
+            <li><a class="active" href="{{ url_for('home')}}">Home</a></li>
+            <li><a href="{{ url_for('offers_page')}}">View Offers</a></li>
+            <li><a href="{{ url_for('add_offers_route')}}">Add an Offer</a></li>
+            <li ><a href="{{ url_for('login_route')}}">Log In</a></li>
+            <li ><a href="{{ url_for('signup_route')}}">Sign Up</a></li>
+            <li class="out"><a href="{{ url_for('logout_route')}}">Log out</a></li>
+        </ul>
+
+
+        {% block body %}{% endblock %}
+
+    
 
 </body>
 </html>

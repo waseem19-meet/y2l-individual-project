@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	 
+
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+  
+
+	<div class="jumbotron text-center">
+  <h1>STOREAL</h1> 
+</div>
+
+
+
+<div class="container-fluid text-center">
+  <h2>STORIES!</h2>
+  <h4>Discover new perspectives</h4>
+  <br>
+  <div class="row">
+    {% for offer in offers %}
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-leaf"></span>
+      <h4>{{offer.subject}}</h4>
+      <p>{{offer.content}}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+
+
+<div class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <br>
+  <br>
+  <br>
+
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Israel and Palestine</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> Storeal@meet.mit.edu</p> 
+    </div>
+    <div class="col-sm-7">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

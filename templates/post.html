@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+{% extends "navigationBar.html" %}
+{% block head %} 
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
@@ -124,8 +124,8 @@
 </style>
 
 
-</head>
-<body>
+{% endblock %}
+{% block body %}
 
 	<div class="story">
     		<form method="POST">
@@ -182,6 +182,6 @@
     }
 </script>
 
-
+{% endblock %}
 </body>
 </html>
