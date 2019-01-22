@@ -12,6 +12,7 @@ class Offer(Base):
 	subject = Column(String)
 	content= Column(String)
 	user_id = Column(Integer, ForeignKey('user.id'))
+	user_Num = Column(Integer, ForeignKey('user.PhoneNum'))
 
 	def __repr__(self):
 		return ("Subject: {}, offer content:{}".format(self.subject, self.content))

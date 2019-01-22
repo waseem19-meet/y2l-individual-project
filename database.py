@@ -9,9 +9,9 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 
-def add_offer(subject, content, user_id):
+def add_offer(subject, content, user_id, user_Num):
     print("Added an offer!")
-    offer = Offer(subject=subject, content=content)
+    offer = Offer(subject=subject, content=content, user_id=user_id, user_Num=user_Num)
     session.add(offer)
     session.commit()
 
@@ -20,6 +20,15 @@ def get_all_offers():
   offers = session.query(Offer).all()
   return offers
 
+# def delete_offer():
+# 	offer = session.query(Offer).filter_by(id=id).first()
+# 	session.delete(offer)
+# 	session.commit()
+
+def get_phone_num_from_id(user_id):
+  user = session.query(User).filter_by(id=user_id).first()
+  num = user.PhoneNum
+  return num
 
 
 def add_user(status, name, email, password, PhoneNum):

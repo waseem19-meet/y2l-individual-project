@@ -67,7 +67,7 @@ label {
 	}
 
 	.card .back {
-		background: #222;
+		background: #2d4d63;
 		color: #FFF;
 		-webkit-transform: rotateX(180deg);
 		transform: rotateX(180deg);
@@ -100,14 +100,33 @@ label:hover :checked + .card {
   padding: 20px;
 }
 
-#movedown{
-	margin-top: 40px;
+p.content{
+	font-weight: normal;
+	font-style: oblique;
+	font-size: 30px;
+	position: fixed;
+	bottom: 50%;
+	width:100%;
+	text-align: center
+	
 }
 
 /*.title{
 	display: flex;
 	flex-direction: row;
 }*/
+p.cell{
+	font-style: italic;
+	font-size: 15px;
+	position: fixed;
+	bottom: 15px;
+	width:100%;
+	text-align: center
+	
+	/*position: static;
+	bottom: 10px;*/
+}
+
 
 
 
@@ -139,9 +158,8 @@ label:hover :checked + .card {
 								
 							</div>
 							<div class="back">
-								<p id="movedown">{{offer.content}}</p>
-								<h3>{{user.PhoneNum}}</h3>
-								
+								<p class="content">{{offer.content}}</p>
+								<p class="cell"><span class="glyphicon glyphicon-earphone"></span> Contact me: 0{{offer.user_Num}}</p>
 							</div>
 						</div>
 					</label>
