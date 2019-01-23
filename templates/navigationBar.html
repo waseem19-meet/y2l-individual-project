@@ -25,10 +25,14 @@
     }
     li a:hover {
         background-color: #111;
+        color: white;
+        text-decoration: none;
     }
 
     .out{
-        margin-left: 640px;
+        /*margin-left: 640px;*/
+        float: right;
+        margin-right: 20px;
         background-color: grey;
     }
 
@@ -43,8 +47,13 @@
             <li><a href="{{ url_for('add_offers_route')}}">Add an Offer</a></li>
             <li ><a href="{{ url_for('login_route')}}">Log In</a></li>
             <li ><a href="{{ url_for('signup_route')}}">Sign Up</a></li>
-            <li class="out"><a href="{{ url_for('logout_route')}}">Log out</a></li>
-        </ul>
+            <li class="out"><a href="{{ url_for('logout_route')}}" onclick="myFunction()" >Log out</a></li>
+        </ul> 
+        <script>
+            function myFunction() {
+                alert("you logged out");
+            }
+        </script>
 
 
         {% block body %}{% endblock %}
