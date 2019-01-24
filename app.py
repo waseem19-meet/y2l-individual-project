@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for, redirect, request, session
-from database import add_offer, get_all_offers, add_user, get_all_users, query_by_username, query_by_password, get_phone_num_from_id
+from database import add_offer, get_all_offers, add_user, get_all_users, query_by_username, query_by_password, get_phone_num_from_id, get_name_from_id
 app = Flask(__name__)
 app.secret_key ="yalla"
 
@@ -27,10 +27,13 @@ def add_offers_route():
         subject = request.form['subject']
         content = request.form['offer_content']
         user_id= session['user_id']
-        user_Num=get_phone_num_from_id(user_id)
+        date = request.form['date']
+        user_Num = get_phone_num_from_id(user_id)
+        user_name = get_name_from_id(user_id)
         # image=request.form['image']
-        add_offer(subject, content,user_id, user_Num)
+        add_offer(subject, content,user_id, user_Num, user_name, date)
         return redirect(url_for('offers_page'))
+        # return 'Some response'
     else:
       return redirect(url_for('login_route'))            
   else:

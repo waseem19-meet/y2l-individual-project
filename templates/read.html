@@ -25,7 +25,7 @@ label {
 	-webkit-perspective: 1000px;
 	perspective: 1000px;
 	margin-left:170px;
-	margin-top: 200px;
+	margin-top: 50px;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	display: block;
@@ -103,6 +103,7 @@ label:hover :checked + .card {
   background-color: #d6d6d4 ;
   text-align: center;
   padding: 5px;
+  margin-bottom: 150px;
 }
 
 .content{
@@ -121,7 +122,7 @@ label:hover :checked + .card {
 	font-style: italic;
 	font-size: 50px;
 	position: fixed;
-	bottom: 40%;
+	bottom: 30%;
 	width:100%;
 	
 
@@ -147,9 +148,20 @@ p.cell{
 	text-align: center
 	font-weight: bold;
 	font-style: oblique;
-	font-size: 55px;
+	font-size: 50px;
 	position: fixed;
-	bottom: 70%;
+	bottom: 50%;
+	width:100%;
+
+}
+
+.name{
+	text-align: center
+	font-weight: bold;
+	font-style: oblique;
+	font-size: 30px;
+	position: fixed;
+	bottom: 85%;
 	width:100%;
 
 }
@@ -181,11 +193,14 @@ p.cell{
 						<input type="checkbox"  />
 						<div class="card">
 							<div class="front">
+								<h4 class="name"> {{offer.user_name}}</h4>
 								<h4 class="title">Subject:</h4>
 								<h5 class="subject">{{offer.subject}}</h5>
+
 								
 							</div>
 							<div class="back">
+								<p>Free on: {{offer.date}}</p>
 								<p class="content">{{offer.content}}</p>
 								<p class="cell"><span class="glyphicon glyphicon-earphone"></span> Contact me: 0{{offer.user_Num}}</p>
 							</div>
