@@ -15,7 +15,7 @@
 	@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
-	background: #33967d;
+	background: #bfa37c;
 	font-family: Open Sans;
 	font-size: 14px;
 	color: #222;
@@ -61,7 +61,7 @@ label {
 		position: absolute;
 		height: 100%;
 		width: 100%;
-		background: #9cba60;
+		background: #c96d46;
 		/*background-image: url("background.jpg");*/
 		text-align: center;
 		color:#FFF;
@@ -72,8 +72,8 @@ label {
 	}
 
 	.card .back {
-		background: #2d4d63;
-		color: #FFF;
+		background: #d6d6d4;
+		color: #000000;
 		-webkit-transform: rotateX(180deg);
 		transform: rotateX(180deg);
 	}
@@ -109,9 +109,9 @@ label:hover :checked + .card {
 .content{
 	font-weight: normal;
 	font-style: oblique;
-	font-size: 30px;
+	font-size: 16px;
 	position: fixed;
-	bottom: 50%;
+	bottom: 40%;
 	width:100%;
 	text-align: center
 	
@@ -178,8 +178,8 @@ p.cell{
 	<div >
 
 	<div class="header">
-		<h2>STORIES!</h2>
-		<h4>Discover new perspectives</h4>
+		<h2>OFFERS</h2>
+		<h4>Let's Be Helpful!</h4>
 	</div>
 
 	
@@ -200,7 +200,7 @@ p.cell{
 								
 							</div>
 							<div class="back">
-								<p>Free on: {{offer.date}}</p>
+								<p><span class="glyphicon glyphicon-calendar"></span> Free on: {{offer.date}}</p>
 								<p class="content">{{offer.content}}</p>
 								<p class="cell"><span class="glyphicon glyphicon-earphone"></span> Contact me: 0{{offer.user_Num}}</p>
 							</div>

@@ -2,6 +2,9 @@
 <html>
 <head>
 
+
+	<link rel="shortcut icon" type="image/png" href="../static/back-3.jpg"/>
+
 	<style>
 	a {
 		text-decoration: none;
@@ -22,7 +25,7 @@
 		/*margin-left: 20px;*/
 		/*width: 200px;
 		height: 70px;*/
-		background-color: #4CAF50;
+		background-color: #ddb399;
 		color: white;
 		/*border: bold ;*/
 		text-align: center;
@@ -71,6 +74,8 @@
 		border-radius:25px;
 		font-family:"FreeMono", monospace;
 		text-align: center;
+		color: 
+
 	}
 
 	input[type=password]{
@@ -89,6 +94,7 @@
 	input[type=submit]{
 		width: 35%;
 		height: 40px;
+		color: black;
 		margin-left:33%;
 		margin-bottom:2%;
 		background-color: white;
@@ -102,6 +108,11 @@
 		background-color: white;
 	}
 
+	label{
+		color: black;
+		font-weight: 650;
+	}
+
 	#other{
 		width: 25%;
 		height: 10%;
@@ -112,11 +123,11 @@
 
 	h1{
 		position: relative;
-		color: #1abc9c ;
+		color: #af4c0e ;
 		text-align: center;
 		font-size: 90px;
 		font-family:"FreeMono", monospace;
-		font-weight: 300
+		font-weight: bold;
 	}
 
 	h2{
@@ -140,7 +151,7 @@
 
 	h4{
 		font-family: "Palanquin", Times, serif;
-		color: #1abc9c;
+		color: #af4c0e;
 		margin-bottom: 5px;
 		text-align: center;
 	}
@@ -166,7 +177,8 @@
 	}
 
 	body{
-		background-color: #2f2f1e;
+		/*background-color: #2f2f1e;*/
+		background-image: url("/static/back-3.jpg");
 		margin-top:8%;
 /*		background-image: url("dark.jpg");
 */		background-repeat: no-repeat;
@@ -212,11 +224,11 @@
 
 
         	<h4>What is your status?</h4>
-        	<input  id="mentor" type="radio" name="status"  value="Mentor">Mentor
+        	<input  id="mentor" type="radio" name="status"  value="Mentor"><label for="status">Mentor</label>
             <br>
-        	<input  id="student" type="radio" name="status" value="Student">Student
+        	<input  id="student" type="radio" name="status" value="Student"><label for="status">Student</label>
             <br>
-            <input type="radio" name="status" value="Other">Other:
+            <input type="radio" name="status" value="Other"><label for="status">Other:</label>
             <br>
             <input type="text" name="status" placeholder="" id="other">
         	<br>

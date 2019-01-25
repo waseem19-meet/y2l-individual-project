@@ -8,6 +8,9 @@
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
+	<link rel="shortcut icon" type="image/png" href="../static/back-4.jpg"/>
+	<link rel="shortcut icon" type="image/png" href="../static/2b-b.jpg"/>
+
 	
 
 	
@@ -94,9 +97,10 @@
 
 	h1{
 		font-family:"FreeMono", monospace;
-		color: #1abc9c;
+		color: #ff7530;
 		text-align: center;
 		font-size: 70px;
+		font-weight: bold;
 		margin-top: 70px;
 	}
 
@@ -106,7 +110,9 @@
 
 	<!-- the style for the popup -->
 	<style>
-	body {font-family: Arial, Helvetica, sans-serif;}
+	body {font-family: Arial, Helvetica, sans-serif;
+		background-image: url("/static/back-4.jpg");
+	}
 
 	/* The Modal (background) */
 	.modal {
@@ -125,7 +131,8 @@
 
 	/* Modal Content */
 	.modal-content {
-		background-color: #fefefe;
+		/*background-color: #964116;*/
+		background-image: url("/static/2b-b.jpg");
 		margin: auto;
 		padding: 20px;
 		border: 1px solid #888;
@@ -142,6 +149,7 @@
 		font-family:"FreeMono", monospace;
 		background-color: white;
 		color:  #1abc9c;
+		border-color: #1abc9c;
 		/*position:relative;
 		margin-top:560px;*/
 	}
@@ -160,6 +168,10 @@
 		text-decoration: none;
 		cursor: pointer;
 	}
+	/*.moveup{
+		position: fixed;
+		bottom: 10px;*/
+	/*}*/
 </style>
 
 
@@ -188,12 +200,16 @@
     	<div class="modal-content">
     		<span class="close">&rArr;</span>
     		<p>Thanks for helping</p>
-    		<button  class="btn">Share Offer</button>
+    		<button  class="btn btn-primary">View offers</button>
     		
     	</div>
     </div>
         </form>
-        <a id="myBtn"  class="btn btn-primary">View offers</a>
+        <!-- <div class="moveup"> -->
+        	<a id="myBtn" class="btn btn-primary"  >Share offer</a>
+        	
+        <!-- </div> -->
+       
         <!-- href="offers"	 -->
     </div>
 
