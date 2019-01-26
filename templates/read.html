@@ -24,13 +24,13 @@ body {
 label {
 	-webkit-perspective: 1000px;
 	perspective: 1000px;
-	margin-left:170px;
-	margin-top: 50px;
+	margin-left:200px;
+	margin-top: 90px;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 	display: block;
-	width: 300px;
-	height: 300px;
+	width: 370px;
+	height: 400px;
 	/*position: absolute;*/
 	left: 50%;
 	top: 50%;
@@ -43,7 +43,7 @@ label {
 
 
 .card {
-	/*position: relative;*/
+	/*position: static;*/
 	height: 100%;
 	width: 100%;
 	-webkit-transform-style: preserve-3d;
@@ -104,16 +104,19 @@ label:hover :checked + .card {
   text-align: center;
   padding: 5px;
   margin-bottom: 150px;
+  padding-top: 38px;
+  width: 100%;
 }
 
 .content{
 	font-weight: normal;
 	font-style: oblique;
-	font-size: 16px;
+	font-size: 20px;
 	position: fixed;
 	bottom: 40%;
-	width:100%;
-	text-align: center
+	left: 5%;
+	width:90%;
+	/*text-align: center*/
 	
 }
 .subject{
@@ -122,7 +125,7 @@ label:hover :checked + .card {
 	font-style: italic;
 	font-size: 50px;
 	position: fixed;
-	bottom: 30%;
+	bottom: 40%;
 	width:100%;
 	
 
@@ -136,7 +139,7 @@ p.cell{
 	font-style: italic;
 	font-size: 15px;
 	position: fixed;
-	bottom: 15px;
+	bottom: 5px;
 	width:100%;
 	text-align: center
 	
@@ -150,21 +153,38 @@ p.cell{
 	font-style: oblique;
 	font-size: 50px;
 	position: fixed;
-	bottom: 50%;
+	bottom: 60%;
 	width:100%;
 
 }
 
 .name{
-	text-align: center
+	text-align: center;
 	font-weight: bold;
 	font-style: oblique;
-	font-size: 30px;
+	font-size: 17px;
 	position: fixed;
-	bottom: 85%;
+	bottom: 10%;
 	width:100%;
 
 }
+
+.calendar{
+	font-style: italic;
+	font-size: 15px;
+	position: fixed;
+	bottom: 30px;
+	width:100%;
+	text-align: center;
+}
+
+h3{
+	position: fixed;
+	bottom: 50%;
+	left: 45%;
+	color: red;
+}
+
 
 
 
@@ -182,6 +202,11 @@ p.cell{
 		<h4>Let's Be Helpful!</h4>
 	</div>
 
+
+
+		<!-- {% if offers == None %}
+		<h3>no posts yet</h3>
+		{% endif %} -->
 	
 	<!-- <div class="title"> -->
 
@@ -193,14 +218,14 @@ p.cell{
 						<input type="checkbox"  />
 						<div class="card">
 							<div class="front">
-								<h4 class="name"> {{offer.user_name}}</h4>
+								<h4 class="name">Posted By: {{offer.user_name}}</h4>
 								<h4 class="title">Subject:</h4>
 								<h5 class="subject">{{offer.subject}}</h5>
 
 								
 							</div>
 							<div class="back">
-								<p><span class="glyphicon glyphicon-calendar"></span> Free on: {{offer.date}}</p>
+								<p class="calendar"><span class="glyphicon glyphicon-calendar"></span> Free on: {{offer.date}}</p>
 								<p class="content">{{offer.content}}</p>
 								<p class="cell"><span class="glyphicon glyphicon-earphone"></span> Contact me: 0{{offer.user_Num}}</p>
 							</div>
