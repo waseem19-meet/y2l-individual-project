@@ -113,9 +113,16 @@ label:hover :checked + .card {
 	font-style: oblique;
 	font-size: 20px;
 	position: fixed;
-	bottom: 40%;
+	top:5%;
 	left: 5%;
 	width:90%;
+	height: 80%;
+	overflow: scroll;
+	/*overflow-y: scroll;*/
+	
+/*	bottom: 40%;
+*/
+	
 	/*text-align: center*/
 	
 }
@@ -123,7 +130,7 @@ label:hover :checked + .card {
 	text-align: center
 	font-weight: 600;
 	font-style: italic;
-	font-size: 50px;
+	font-size: 40px;
 	position: fixed;
 	bottom: 40%;
 	width:100%;
@@ -181,10 +188,17 @@ p.cell{
 h3{
 	position: fixed;
 	bottom: 50%;
-	left: 45%;
-	color: red;
+	left: 40%;
+	color: black;
+	font-size: 50px;
+	font-family: Impact, Charcoal, sans-serif;
 }
 
+.position{
+	height: 350px;
+	/*background: #d6d6d4;*/
+	
+}
 
 
 
@@ -204,9 +218,9 @@ h3{
 
 
 
-		<!-- {% if offers == None %}
-		<h3>no posts yet</h3>
-		{% endif %} -->
+		{% if offers == [] %}
+			<h3>no posts yet</h3>
+		{% endif %}
 	
 	<!-- <div class="title"> -->
 
@@ -226,7 +240,10 @@ h3{
 							</div>
 							<div class="back">
 								<p class="calendar"><span class="glyphicon glyphicon-calendar"></span> Free on: {{offer.date}}</p>
-								<p class="content">{{offer.content}}</p>
+								<!-- <div class="position"> -->
+									<p class="content">{{offer.content}}</p>
+								<!-- </div> -->
+								
 								<p class="cell"><span class="glyphicon glyphicon-earphone"></span> Contact me: 0{{offer.user_Num}}</p>
 							</div>
 						</div>

@@ -13,6 +13,7 @@
         padding: 0;
         overflow: hidden;
         background-color: #333;
+        z-index: 25;
     }
 
     li {
@@ -46,7 +47,9 @@
         <ul>
             <li><a class="active" href="{{ url_for('home')}}">Home</a></li>
             <li><a href="{{ url_for('offers_page')}}">View Offers</a></li>
+            {% if session['status']== 'Mentor' %}
             <li><a href="{{ url_for('add_offers_route')}}">Add an Offer</a></li>
+            {% endif %}
             <li ><a href="{{ url_for('login_route')}}">Log In</a></li>
             <li ><a href="{{ url_for('signup_route')}}">Sign Up</a></li>
             <li class="out"><a href="{{ url_for('logout_route')}}" onclick="myFunction()" >Log out</a></li>

@@ -59,6 +59,7 @@ def login_route():
 				session['logged_in'] = True
 				session['user_id'] = user.id
 				session['display_login'] = True
+				session['status']= user.status
 				global current_user_id
 				current_user_id = user.id
 				return redirect(url_for('home'))
@@ -103,6 +104,8 @@ def signup_route():
 		email = request.form['email']
 		password= request.form['password']
 		phone = request.form['phone']
+
+
 
 		g=query_by_username(name)
 
