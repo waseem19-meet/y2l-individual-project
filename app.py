@@ -114,7 +114,7 @@ def signup_route():
 		else:   
 			add_user(status, name, email, password,phone)
 			session['display_login'] = True
-	return redirect(url_for('login_route'))
+	return redirect(url_for('home'))
 
 
 @app.route('/logout')
