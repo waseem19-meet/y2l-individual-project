@@ -127,9 +127,9 @@ def logout_route():
 	return redirect(url_for('home'))
 	print('logged out')
 
-# @app.route('/nav')
-# def navi():
-# 	return render_template('navigationBar.html')
+@app.route('/about Us')
+def about():
+	return render_template('about.html')
 	
 
 

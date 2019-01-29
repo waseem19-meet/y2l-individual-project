@@ -48,6 +48,7 @@
    
         <ul>
             <li><a class="active" href="{{ url_for('home')}}">Home</a></li>
+            <li><a class="active" href="{{ url_for('about')}}">About Us</a></li>
             <li><a href="{{ url_for('offers_page')}}">View Offers</a></li>
             {% if session['status']== 'Mentor' %}
             <li><a href="{{ url_for('add_offers_route')}}">Add an Offer</a></li>
