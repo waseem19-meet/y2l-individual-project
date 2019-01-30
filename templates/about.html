@@ -17,7 +17,7 @@ body{
   /*background-image: url("/static/images.jpeg");*/
   /*width: 100%;
   height: 100%;*/
-  background-color: #ccb38c;
+  background-color: #EDDBCD;
   background-repeat: no-repeat;
 }
 .card {
@@ -63,20 +63,22 @@ button:hover, a:hover {
   height: 150px; 
   text-align: center;
   margin-top: -100px;
-  margin-bottom: 30px;
+  margin-bottom: 110px;
   font-size: 18px;
   font-weight: bold;
   color: black;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-style: italic;
 }
 
 h3 {
-  background-color: #999692 ;
+  background-color: #db8948 ;
   /*text-align: center;*/
   /*position: fixed;*/
   width: 100%;
   padding-right:20px;
   left: 50%;
+  margin-top: -130px;
   margin-bottom: 150px;
   padding-top: 38px;
   padding-bottom: 20px;
@@ -87,27 +89,27 @@ h3 {
 
 <style>
 .myDIV {
-  width: 50%;
+  width: 45%;
   height: 240px;
   padding: 30px 0;
-  margin-left: 25%;
+  margin-left: 27%;
   margin-top: 5px;
   /*text-align: center;*/
-  background-color: #cec5b7;
+  background-color: #998575;
   /*margin-top: 20px;*/
   display: none;
 }
 
 .myDIV1 {
-  width: 50%;
+  width: 45%;
   height: 190px;
   padding: 30px 0;
-  margin-left: 25%;
+  margin-left: 27%;
   margin-top: 5px;
   /*text-align: center;*/
   /*position: absolute;*/
   /*left: 50%;*/
-  background-color: #cec5b7;
+  background-color: #998575;
   /*margin-top: 20px;*/
   display: none;
 }
@@ -123,7 +125,7 @@ h3 {
 }*/
 
 .how{
-  background-color: #b5ab9b;
+  background-color: #CDCDCD;
   margin-top: 30px;
   padding-bottom: 50px;
   padding-top: 30px;
@@ -131,12 +133,16 @@ h3 {
 .student{
   position: absolute;
   left: 33%;
-  font-size: 20px;
+  font-size: 18px;
+  /*font-weight: bold;*/
+  color: black;
 }
 .Teacher{
   position: absolute;
   left: 33%;
-  font-size: 20px;
+  font-size: 18px;
+  /*font-weight: bold;*/
+  color: black;
 
 }
 h2{
@@ -150,16 +156,87 @@ h4{
   font-size: 30px;
   font-family: Impact, Charcoal, sans-serif;
 }
+
+/*img {
+  -webkit-filter: grayscale(100%);  Safari 6.0 - 9.0 
+  filter: grayscale(100%);
+}*/
+
+
+.container {
+  position: relative;
+  width: 380px;
+  left: -15px;
+  /*max-width: 300px;*/
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 92%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+.head{
+  width: 100%;
+  background-color: #db8948;
+  height: 130px;
+  /*margin-bottom: 150px;*/
+}
+.contact{
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+.contact:hover{
+  color: grey;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+
 </style>
 
 {% endblock %}
 {% block body %}
 
+<div class="head">
+  
+</div>
   <center>
 	<div class="w3-container w3-padding-32" id="about">
     <h3>About</h3>
   
-    <p class="paragraph"> This website has been created by Waseem Lawen. As a part of our journey throughhout the program MEET: The Middle East Entrepreneurs of tommorrow, we have to sumit an individual project that is a website in our second year in the program. And I didn't creat this website just because I'm obliged to in order for me to continue in the program, but it was created because it's a sensitive subject that needs to be helped with because for me as a palestinian living in Israel at some point I'm going to attend those Hebrew speaking universities in Israel and I may as well face the same difficulty other Palestinians have and are still facing because we don't get our right of mother-tounge education.
+    <p class="paragraph"> This website has been created by Waseem Lawen.
+      <br>
+     As a part of our journey throughout the program MEET: The Middle East Entrepreneurs of tommorrow, we have to submit a website created by each individual student, in our second year in the program.
+     <br> 
+     <br>
+    This website hasn't been created just because we are obliged to in order for us to to continue in the program, but it was created because it's a very important topic that needs to be helped with because for me as a palestinian living in Israel at some point I'm going to attend a Hebrew speaking university and I may as well face the same difficulties other Palestinians have and are still facing because we don't get our right to mother-tounge education.
     </p>
     <br>
       <h2>So I hope this website helps you!</h2>
@@ -182,11 +259,16 @@ h4{
 
 
 <div class="card">
-  <img src="/static/waseem.jpeg" alt="Waseem" style="width:100%">
+  <div class="container">
+    <img src="/static/waseem.jpeg" alt="Waseem" class="image" style="width: 100%;">
+    <div class="overlay">Welcome to my Website</div>
+    </div>
   <h1>Waseem Lawen</h1>
   <p class="title">Student</p>
   <p>I am Waseem Lawen the creator of this website I am 17 years old and live in the holy city, Nazareth.</p>
-  <p><button>Contact</button></p>
+  <!-- <p><button>Contact</button></p> -->
+  <a class="contact" data-toggle="tooltip" data-placement="bottom" title="052-4866822">Contact</a>
+
 </div>
 
 
@@ -258,6 +340,12 @@ function myFunction1() {
     x.style.display = "none";
   }
 }
+</script>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
 </script>
 
 
