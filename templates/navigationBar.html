@@ -53,9 +53,12 @@
             {% if session['status']== 'Mentor' %}
             <li><a href="{{ url_for('add_offers_route')}}">Add an Offer</a></li>
             {% endif %}
+            {% if session['logged_in']!= True %}
             <li ><a href="{{ url_for('login_route')}}">Log In</a></li>
             <li ><a href="{{ url_for('signup_route')}}">Sign Up</a></li>
+            {% endif %}
             <li class="out"><a href="{{ url_for('logout_route')}}" onclick="myFunction()" >Log out</a></li>
+
         </ul> 
         <script>
             function myFunction() {
